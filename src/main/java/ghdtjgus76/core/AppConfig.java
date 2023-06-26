@@ -2,6 +2,7 @@ package ghdtjgus76.core;
 
 import ghdtjgus76.core.discount.DiscountPolicy;
 import ghdtjgus76.core.discount.FixDiscountPolicy;
+import ghdtjgus76.core.discount.RateDiscountPolicy;
 import ghdtjgus76.core.member.MemberRepository;
 import ghdtjgus76.core.member.MemberService;
 import ghdtjgus76.core.member.MemberServiceImpl;
@@ -23,6 +24,6 @@ public class AppConfig {
     }
 
     private DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
