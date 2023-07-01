@@ -1,10 +1,12 @@
 package ghdtjgus76.core.discount;
 
+import ghdtjgus76.core.annotation.MainDiscountPolicy;
 import ghdtjgus76.core.member.Grade;
 import ghdtjgus76.core.member.Member;
 import org.springframework.stereotype.Component;
 
 @Component
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy {
     private int discountPercent = 10;
 

@@ -1,5 +1,6 @@
 package ghdtjgus76.core.order;
 
+import ghdtjgus76.core.annotation.MainDiscountPolicy;
 import ghdtjgus76.core.discount.DiscountPolicy;
 import ghdtjgus76.core.discount.FixDiscountPolicy;
 import ghdtjgus76.core.discount.RateDiscountPolicy;
@@ -11,10 +12,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
+
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
