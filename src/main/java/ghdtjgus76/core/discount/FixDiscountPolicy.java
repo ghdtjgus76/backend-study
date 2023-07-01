@@ -2,7 +2,9 @@ package ghdtjgus76.core.discount;
 
 import ghdtjgus76.core.member.Grade;
 import ghdtjgus76.core.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy {
     private int discountFixAmount = 1000;
     @Override
