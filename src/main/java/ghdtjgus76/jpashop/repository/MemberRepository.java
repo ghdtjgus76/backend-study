@@ -1,4 +1,4 @@
-package ghdtjgus76.jpashop.domain.repository;
+package ghdtjgus76.jpashop.repository;
 
 import ghdtjgus76.jpashop.domain.Member;
 import jakarta.persistence.EntityManager;
